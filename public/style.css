@@ -1,15 +1,23 @@
 body {
   background-color: lightslategray;
 
+
 }
 
 h1 {
-  color: white;
+  color: pink;
+  font-family: monospace;
+  font-size: 48px;
   text-align: center;
   margin: auto;
+  padding-bottom: 50px;
 }
 
 div {
+  padding-top: 50px;
   margin: auto;
   text-align: center;
+  color: pink;
+  font-family: monospace;
+  font-size: 16px;
 }
