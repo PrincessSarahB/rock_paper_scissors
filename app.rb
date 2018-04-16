@@ -7,7 +7,11 @@ require_relative('./models/game.rb')
 # "Rock Wins!"
 # end
 
+get '/home' do
+return erb(:home)
+end
+
 get '/:player1/:player2' do
-game = Game.rock_paper_scissors(params[:player1], params[:player2])
-return game.to_s
+@winner = Game.rock_paper_scissors(params[:player1], params[:player2])
+return erb(:win)
 end
