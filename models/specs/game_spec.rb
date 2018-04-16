@@ -21,15 +21,27 @@ def test_draw__both_scissors()
 assert_equal("it's a draw!", @game1.rock_paper_scissors("scissors", "scissors"))
 end
 
-def test_rock_wins()
-assert_equal("player 1 wins! Rock beats scissors", @game1.rock_paper_scissors("rock", "scissors") )
+def test_rock_wins__player_1()
+assert_equal("player 1 wins!", @game1.rock_paper_scissors("rock", "scissors") )
 end
 #
-# def test_scissors_wins()
+def test_scissors_wins__player_1()
+assert_equal("player 1 wins!", @game1.rock_paper_scissors("scissors", "paper") )
+end
 #
-# end
-#
-# def test_paper_wins()
-#
-# end
+def test_paper_wins__player_1()
+assert_equal("player 1 wins!", @game1.rock_paper_scissors("paper", "rock") )
+end
+
+def test_rock_wins__player_2()
+  assert_equal("player 2 wins!", @game1.rock_paper_scissors("rock", "paper") )
+end
+
+def test_scissors_wins__player_2()
+  assert_equal("player 2 wins!", @game1.rock_paper_scissors("paper", "scissors") )
+end
+
+def test_paper_wins__player_2()
+  assert_equal("player 2 wins!", @game1.rock_paper_scissors("scissors", "rock") )
+end
 end
